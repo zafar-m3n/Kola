@@ -3,7 +3,8 @@ import { Icon } from "@iconify/react";
 
 const TABS = [
   { id: "brand", label: "Brand", icon: "solar:leaf-bold-duotone" },
-  { id: "story", label: "Story", icon: "solar:book-2-bold-duotone" },
+  { id: "activityBox", label: "Activity Box", icon: "solar:box-bold-duotone" },
+  { id: "story", label: "Story", icon: "solar:notebook-bookmark-bold-duotone" },
   { id: "cards", label: "Cards", icon: "solar:card-2-bold-duotone" },
   { id: "board", label: "Board", icon: "solar:gamepad-bold-duotone" },
   { id: "kitchen", label: "Kitchen", icon: "solar:chef-hat-bold-duotone" },
@@ -16,21 +17,25 @@ const COLORS = [
   {
     name: "Parchment",
     value: "#f7f0e3",
+    swatch: "bg-[#f7f0e3]",
     usage: "Warm background, physical paper feel, storybook base",
   },
   {
     name: "Leaf Green",
     value: "#4a7a38",
+    swatch: "bg-[#4a7a38]",
     usage: "Primary accent, active tabs, eco-token language",
   },
   {
     name: "Coconut",
     value: "#c4956a",
+    swatch: "bg-[#c4956a]",
     usage: "Warm secondary accent, kitchen, family, food cues",
   },
   {
     name: "Deep Earth",
     value: "#2a4a20",
+    swatch: "bg-[#2a4a20]",
     usage: "Main dark colour, headings, hero, premium contrast",
   },
 ];
@@ -88,6 +93,64 @@ const BEHAVIOUR_PRINCIPLES = [
     principle: "Identity-Based Habits",
     problem: "One-time learning does not stick.",
     application: "Children become Kola Keepers, turning sustainable behaviour into identity and pride.",
+  },
+];
+
+const ACTIVITY_BOX_ITEMS = [
+  {
+    item: "1x Rigid Board Game Lid",
+    icon: "solar:gamepad-bold-duotone",
+    purpose: "Built into the box structure so the packaging itself becomes the board.",
+  },
+  {
+    item: "4x Wooden Animal Tokens",
+    icon: "solar:ghost-bold-duotone",
+    purpose: "Kalu, Podi, Chuti, and one blank DIY token for the child to personalise.",
+  },
+  {
+    item: "1x Wooden Die",
+    icon: "solar:widget-4-bold-duotone",
+    purpose: "Simple movement mechanic for ages 5+.",
+  },
+  {
+    item: "20x Green Leaf Tokens",
+    icon: "solar:leaf-bold-duotone",
+    purpose: "Immediate positive reinforcement for circular choices.",
+  },
+  {
+    item: "20x Red Waste Blocks",
+    icon: "solar:trash-bin-trash-bold-duotone",
+    purpose: "Physical loss-aversion mechanic that makes waste visible and annoying.",
+  },
+  {
+    item: "30x Decision & Parent Expert Cards",
+    icon: "solar:card-2-bold-duotone",
+    purpose: "Kid-facing dilemmas paired with parent authority scripts.",
+  },
+  {
+    item: "6x Deconstructed Storybook Page Layouts",
+    icon: "solar:notebook-bold-duotone",
+    purpose: "Heavy kraft cardstock pages reserved for the later activity-book prototype.",
+  },
+  {
+    item: "1x Pre-punched Coir Rope Twin Roll",
+    icon: "solar:link-circle-bold-duotone",
+    purpose: "Book-binding material for the future maker layer.",
+  },
+  {
+    item: "4x Sealed Sensory Pouches",
+    icon: "solar:bag-heart-bold-duotone",
+    purpose: "Husks, banana leaf, cinnamon patch, and coir peat for future activity expansion.",
+  },
+  {
+    item: "1x Non-Toxic Kithul-Flour Starch Glue",
+    icon: "solar:bottle-bold-duotone",
+    purpose: "Safe natural-feeling glue for attaching physical kit materials.",
+  },
+  {
+    item: "1x Sheet of Green Reward Dot Stickers",
+    icon: "solar:sticker-smile-circle-2-bold-duotone",
+    purpose: "Used for pantry patrol, rewards, and pledge tracking.",
   },
 ];
 
@@ -311,8 +374,8 @@ const WORKSHOP_STEPS = [
   },
   {
     time: "10–25 min",
-    title: "Story Read-Aloud",
-    text: "Read the Kola story and let children touch the sensorial pieces while parents observe.",
+    title: "Activity Box Introduction",
+    text: "Show the board lid, tokens, red waste blocks, green leaves, parent expert cards, and box layers.",
   },
   {
     time: "25–50 min",
@@ -326,13 +389,13 @@ const WORKSHOP_STEPS = [
   },
   {
     time: "70–85 min",
-    title: "Kola Keeper Pledge",
-    text: "Each child writes one realistic habit they will try at home this week.",
+    title: "Box Feedback",
+    text: "Ask which components feel useful, confusing, too expensive, or most exciting.",
   },
   {
     time: "85–90 min",
-    title: "Feedback Wall",
-    text: "Collect what confused them, what excited them, and what they would actually use at home.",
+    title: "Kola Keeper Pledge",
+    text: "Each child writes one realistic habit they will try at home this week.",
   },
 ];
 
@@ -354,17 +417,17 @@ const PITCH_SLIDES = [
     points: [
       "A red waste token on the table is more memorable than a paragraph about landfill.",
       "A parent reading an Expert Card feels more natural than an outside teacher correcting the family.",
-      "A child who becomes a Kola Keeper is more likely to repeat the behaviour.",
+      "A physical activity box makes the habit visible after the game ends.",
     ],
   },
   {
     label: "Solution",
     icon: "solar:magic-stick-3-bold-duotone",
-    title: "Kola Circle is a family board game for circular food habits.",
+    title: "Kola Circle is a family board game and circular food activity box.",
     points: [
       "Children make food choices through dilemma cards.",
       "Parents reveal the meaning through expert answer cards.",
-      "The board, tokens, score, and kitchen challenge turn circularity into a repeatable family ritual.",
+      "The board, tokens, score, box layers, and kitchen challenge turn circularity into a repeatable family ritual.",
     ],
   },
   {
@@ -400,7 +463,7 @@ const BUSINESS_TIERS = [
   {
     title: "Family Edition Kit",
     icon: "solar:box-bold-duotone",
-    text: "A reusable board game box with cards, tokens, parent guide, scorecard, and storybook.",
+    text: "A reusable board game box with cards, tokens, parent guide, scorecard, and storybook-ready activity materials.",
     tag: "Core product",
   },
   {
@@ -450,7 +513,7 @@ const PARTNERS = [
     role: "Sponsor refill packs and activations",
   },
   {
-    name: "NGOs",
+    name: "Eco-Schools / NGOs",
     icon: "solar:hand-heart-bold-duotone",
     role: "Support impact measurement and reach",
   },
@@ -498,6 +561,7 @@ function App() {
 
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 md:py-14 lg:px-8">
         {activeTab === "brand" && <BrandTab />}
+        {activeTab === "activityBox" && <ActivityBoxTab />}
         {activeTab === "story" && <StoryTab />}
         {activeTab === "cards" && (
           <CardsTab
@@ -541,15 +605,15 @@ function Hero() {
         <p className="mt-4 font-['Instrument_Serif'] text-3xl italic text-[#f7f0e3] md:text-4xl">Grow. Eat. Return.</p>
 
         <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-[#f7f0e3]/80 md:text-lg">
-          A family board game and sensorial learning kit that turns everyday food decisions into playful circular habits
-          for kids, parents, and kitchens.
+          A family board game and activity box that turns everyday food decisions into playful circular habits for kids,
+          parents, and kitchens.
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Badge icon="solar:leaf-bold-duotone" text="Design Thinking" />
           <Badge icon="solar:brain-bold-duotone" text="Behavioural Science" />
           <Badge icon="solar:chef-hat-bold-duotone" text="Food Circularity" />
-          <Badge icon="solar:users-group-rounded-bold-duotone" text="Family Edition" />
+          <Badge icon="solar:box-bold-duotone" text="Activity Box" />
         </div>
       </div>
     </header>
@@ -598,7 +662,7 @@ function BrandTab() {
             <NameCard name="Kola Circle" desc="The family board game product line" />
             <NameCard name="Kola Kitchen" desc="The Circular MasterChef component" />
             <NameCard name="Kola Keepers" desc="The child identity programme" />
-            <NameCard name="Expert Guide" desc="The parent authority mechanic" />
+            <NameCard name="Activity Box" desc="The physical kit and prototype system" />
           </div>
 
           <div className="mt-6 rounded-3xl border border-[#f7f0e3]/15 bg-[#f7f0e3]/10 p-5">
@@ -620,10 +684,7 @@ function BrandTab() {
             {COLORS.map((color) => (
               <div key={color.name} className="rounded-3xl border border-[#4a7a38]/15 bg-white/30 p-4">
                 <div className="flex items-center gap-4">
-                  <div
-                    className="h-14 w-14 rounded-2xl border border-[#2a4a20]/10"
-                    style={{ backgroundColor: color.value }}
-                  />
+                  <div className={`h-14 w-14 rounded-2xl border border-[#2a4a20]/10 ${color.swatch}`} />
                   <div>
                     <p className="font-bold text-[#2a4a20]">{color.name}</p>
                     <p className="text-sm font-semibold text-[#4a7a38]">{color.value}</p>
@@ -659,24 +720,84 @@ function BrandTab() {
   );
 }
 
-function NameCard({ name, desc }) {
+function ActivityBoxTab() {
   return (
-    <div className="rounded-3xl border border-[#f7f0e3]/15 bg-[#f7f0e3]/10 p-4">
-      <p className="font-['Instrument_Serif'] text-2xl text-[#f7f0e3]">{name}</p>
-      <p className="mt-1 text-sm leading-6 text-[#f7f0e3]/70">{desc}</p>
-    </div>
-  );
-}
+    <div>
+      <SectionHeader
+        eyebrow="Physical Prototype"
+        title="The complete Kola Circle Activity Box."
+        text="This is the manufactured cardboard box prototype. It combines the board game, parent guide, tokens, cards, mission prompts, and activity materials into one testable family kit."
+      />
 
-function InfoCard({ title, icon, text }) {
-  return (
-    <article className="rounded-4xl border border-[#4a7a38]/20 bg-white/30 p-6 shadow-sm">
-      <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#4a7a38]/10 text-[#4a7a38]">
-        <Icon icon={icon} className="text-3xl" />
+      <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="rounded-4xl bg-[#2a4a20] p-6 text-[#f7f0e3] lg:sticky lg:top-28 lg:h-fit md:p-8">
+          <Icon icon="solar:box-bold-duotone" className="text-5xl text-[#c4956a]" />
+          <h3 className="mt-5 font-['Instrument_Serif'] text-5xl leading-tight">Kola Circle Activity Box</h3>
+          <p className="mt-4 text-sm leading-7 text-[#f7f0e3]/75">
+            The box itself becomes part of the experience. The lid holds the board, the cards drive the family
+            discussion, and the components make the circular food system feel physical and playable.
+          </p>
+
+          <div className="mt-6 rounded-3xl border border-[#f7f0e3]/15 bg-[#f7f0e3]/10 p-5">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#c4956a]">Prototype Logic</p>
+            <p className="mt-2 text-sm leading-7 text-[#f7f0e3]/75">
+              The kit is not only educational. It is playable, buildable, refillable, and testable in a design thinking
+              workshop.
+            </p>
+          </div>
+
+          <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            <BoxMetric value="30" label="Cards" />
+            <BoxMetric value="4" label="Sensory Pouches" />
+            <BoxMetric value="6" label="Story Pages" />
+            <BoxMetric value="40" label="Tokens / Blocks" />
+          </div>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-2">
+          {ACTIVITY_BOX_ITEMS.map((item) => (
+            <article key={item.item} className="rounded-4xl border border-[#4a7a38]/20 bg-white/30 p-5 shadow-sm">
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#4a7a38]/10 text-[#4a7a38]">
+                  <Icon icon={item.icon} className="text-3xl" />
+                </div>
+                <div>
+                  <h3 className="font-['Instrument_Serif'] text-2xl leading-tight text-[#2a4a20]">{item.item}</h3>
+                  <p className="mt-2 text-sm leading-7 text-[#2a4a20]/70">{item.purpose}</p>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
-      <h3 className="font-['Instrument_Serif'] text-2xl text-[#2a4a20]">{title}</h3>
-      <p className="mt-3 text-sm leading-7 text-[#2a4a20]/70">{text}</p>
-    </article>
+
+      <div className="mt-8 rounded-4xl border border-[#4a7a38]/20 bg-white/30 p-6 shadow-sm md:p-8">
+        <h3 className="font-['Instrument_Serif'] text-4xl text-[#2a4a20]">How the kit is organized inside the box</h3>
+
+        <div className="mt-6 grid gap-4 lg:grid-cols-4">
+          <PackingLayer
+            icon="solar:gamepad-bold-duotone"
+            title="Top Layer"
+            text="Rigid board lid, die, animal tokens, green leaves, and red waste blocks."
+          />
+          <PackingLayer
+            icon="solar:card-2-bold-duotone"
+            title="Card Layer"
+            text="Decision cards, Parent Expert cards, and mission prompts grouped by stage."
+          />
+          <PackingLayer
+            icon="solar:book-2-bold-duotone"
+            title="Maker Layer"
+            text="Kraft storybook pages, pre-punched coir rope, glue, and stickers for later expansion."
+          />
+          <PackingLayer
+            icon="solar:bag-heart-bold-duotone"
+            title="Sensory Layer"
+            text="Four sealed pouches reserved for the future sensorial activity version."
+          />
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -684,7 +805,7 @@ function StoryTab() {
   return (
     <div>
       <SectionHeader
-        eyebrow="Sensorial Storybook"
+        eyebrow="Story Concept"
         title="Kola and the Circle Tree."
         text="A read-aloud family story where Amara and Aachchi follow food from tree to kitchen to plate to soil and back again."
       />
@@ -862,35 +983,6 @@ function CardsTab({ activeCard, activeCardIndex, selectedChoice, onCardChange, o
   );
 }
 
-function ChoiceButton({ label, text, active, onClick }) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className={`rounded-3xl border p-5 text-left transition ${
-        active
-          ? "border-[#2a4a20] bg-[#2a4a20] text-[#f7f0e3]"
-          : "border-[#4a7a38]/20 bg-white/30 text-[#2a4a20] hover:border-[#4a7a38]"
-      }`}
-    >
-      <p className={`text-xs font-bold uppercase tracking-[0.22em] ${active ? "text-[#c4956a]" : "text-[#4a7a38]"}`}>
-        {label}
-      </p>
-      <p className="mt-3 text-base font-semibold leading-7">{text}</p>
-    </button>
-  );
-}
-
-function MiniMechanic({ icon, title, text }) {
-  return (
-    <div className="rounded-3xl border border-[#4a7a38]/20 bg-white/30 p-5">
-      <Icon icon={icon} className="text-4xl text-[#4a7a38]" />
-      <p className="mt-3 font-bold text-[#2a4a20]">{title}</p>
-      <p className="mt-1 text-sm leading-6 text-[#2a4a20]/65">{text}</p>
-    </div>
-  );
-}
-
 function BoardTab() {
   return (
     <div>
@@ -992,37 +1084,6 @@ function BoardTab() {
   );
 }
 
-function BoardNode({ stage, index }) {
-  const positions = [
-    "left-1/2 top-2 -translate-x-1/2",
-    "right-5 top-1/4",
-    "right-8 bottom-1/4",
-    "bottom-2 left-1/2 -translate-x-1/2",
-    "bottom-1/4 left-8",
-    "left-5 top-1/4",
-  ];
-
-  return (
-    <div
-      className={`absolute z-20 flex h-20 w-20 flex-col items-center justify-center rounded-3xl border-4 border-[#f7f0e3] ${stage.color} text-[#f7f0e3] shadow-lg md:h-28 md:w-28 ${positions[index]}`}
-    >
-      <Icon icon={stage.icon} className="text-2xl md:text-4xl" />
-      <p className="mt-1 text-xs font-bold md:text-sm">{stage.name}</p>
-    </div>
-  );
-}
-
-function TokenCard({ icon, title, score, text }) {
-  return (
-    <div className="rounded-3xl border border-[#4a7a38]/15 bg-[#f7f0e3] p-5">
-      <Icon icon={icon} className="text-4xl text-[#4a7a38]" />
-      <p className="mt-3 font-bold text-[#2a4a20]">{title}</p>
-      <p className="mt-1 font-['Instrument_Serif'] text-2xl text-[#c4956a]">{score}</p>
-      <p className="mt-2 text-sm leading-6 text-[#2a4a20]/65">{text}</p>
-    </div>
-  );
-}
-
 function KitchenTab() {
   return (
     <div>
@@ -1101,23 +1162,13 @@ function KitchenTab() {
   );
 }
 
-function KitchenMini({ icon, title, text }) {
-  return (
-    <div className="rounded-3xl border border-[#f7f0e3]/15 bg-[#f7f0e3]/10 p-5">
-      <Icon icon={icon} className="text-4xl text-[#c4956a]" />
-      <p className="mt-3 font-bold text-[#f7f0e3]">{title}</p>
-      <p className="mt-2 text-sm leading-6 text-[#f7f0e3]/65">{text}</p>
-    </div>
-  );
-}
-
 function WorkshopTab() {
   return (
     <div>
       <SectionHeader
         eyebrow="Workshop Flow"
         title="A 90-minute design thinking test."
-        text="This format lets you test whether families understand the game, whether parents like the Expert Guide role, and whether children remember the micro-habits."
+        text="This format tests whether families understand the game, whether parents like the Expert Guide role, and whether the activity box components feel useful, realistic, and desirable."
       />
 
       <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
@@ -1129,8 +1180,8 @@ function WorkshopTab() {
               "Can children play without too much explanation?",
               "Do parents enjoy being the expert?",
               "Are red tokens emotionally noticeable?",
-              "Do families leave with one real habit?",
-              "Does the kitchen activity make the concept feel practical?",
+              "Does the box feel like a real product?",
+              "Which components should be kept, removed, or simplified?",
             ].map((item) => (
               <div key={item} className="flex items-start gap-3">
                 <Icon icon="solar:check-circle-bold-duotone" className="mt-1 shrink-0 text-2xl text-[#c4956a]" />
@@ -1169,7 +1220,7 @@ function PitchTab() {
       <SectionHeader
         eyebrow="Startup Pitch"
         title="The pitch is simple: food habits need play."
-        text="Kola Circle sits between family board games, sustainability education, food-sector circularity, and Sri Lankan cultural storytelling."
+        text="Kola Circle sits between family board games, sustainability education, food-sector circularity, physical activity kits, and Sri Lankan cultural storytelling."
       />
 
       <div className="grid gap-5 lg:grid-cols-2">
@@ -1253,10 +1304,10 @@ function ModelTab() {
           <div className="mt-6 space-y-4">
             {[
               "Build one paper board and 12 printed cards.",
+              "Prepare simple physical tokens using paper, wood, or cardboard.",
               "Test with 3 families or one workshop table.",
               "Observe where people get confused without explaining.",
-              "Keep the cards that create real conversation.",
-              "Turn the strongest version into a printable kit.",
+              "Turn the strongest version into a printable/refillable kit.",
             ].map((step, index) => (
               <div key={step} className="flex items-start gap-4">
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f7f0e3]/10 text-sm font-bold text-[#c4956a]">
@@ -1270,12 +1321,122 @@ function ModelTab() {
           <div className="mt-6 rounded-3xl border border-[#f7f0e3]/15 bg-[#f7f0e3]/10 p-5">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#c4956a]">First Sellable Version</p>
             <p className="mt-2 text-sm leading-7 text-[#f7f0e3]/75">
-              A family kit with one foldable board, 36 cards, 6 player tokens, green leaves, red waste blocks,
-              scorecards, storybook, and parent expert guide.
+              A family kit with one foldable board, 30 cards, animal tokens, green leaves, red waste blocks, storybook
+              page templates, coir rope, stickers, and a parent expert guide.
             </p>
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+function ChoiceButton({ label, text, active, onClick }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`rounded-3xl border p-5 text-left transition ${
+        active
+          ? "border-[#2a4a20] bg-[#2a4a20] text-[#f7f0e3]"
+          : "border-[#4a7a38]/20 bg-white/30 text-[#2a4a20] hover:border-[#4a7a38]"
+      }`}
+    >
+      <p className={`text-xs font-bold uppercase tracking-[0.22em] ${active ? "text-[#c4956a]" : "text-[#4a7a38]"}`}>
+        {label}
+      </p>
+      <p className="mt-3 text-base font-semibold leading-7">{text}</p>
+    </button>
+  );
+}
+
+function MiniMechanic({ icon, title, text }) {
+  return (
+    <div className="rounded-3xl border border-[#4a7a38]/20 bg-white/30 p-5">
+      <Icon icon={icon} className="text-4xl text-[#4a7a38]" />
+      <p className="mt-3 font-bold text-[#2a4a20]">{title}</p>
+      <p className="mt-1 text-sm leading-6 text-[#2a4a20]/65">{text}</p>
+    </div>
+  );
+}
+
+function BoardNode({ stage, index }) {
+  const positions = [
+    "left-1/2 top-2 -translate-x-1/2",
+    "right-5 top-1/4",
+    "right-8 bottom-1/4",
+    "bottom-2 left-1/2 -translate-x-1/2",
+    "bottom-1/4 left-8",
+    "left-5 top-1/4",
+  ];
+
+  return (
+    <div
+      className={`absolute z-20 flex h-20 w-20 flex-col items-center justify-center rounded-3xl border-4 border-[#f7f0e3] ${stage.color} text-[#f7f0e3] shadow-lg md:h-28 md:w-28 ${positions[index]}`}
+    >
+      <Icon icon={stage.icon} className="text-2xl md:text-4xl" />
+      <p className="mt-1 text-xs font-bold md:text-sm">{stage.name}</p>
+    </div>
+  );
+}
+
+function TokenCard({ icon, title, score, text }) {
+  return (
+    <div className="rounded-3xl border border-[#4a7a38]/15 bg-[#f7f0e3] p-5">
+      <Icon icon={icon} className="text-4xl text-[#4a7a38]" />
+      <p className="mt-3 font-bold text-[#2a4a20]">{title}</p>
+      <p className="mt-1 font-['Instrument_Serif'] text-2xl text-[#c4956a]">{score}</p>
+      <p className="mt-2 text-sm leading-6 text-[#2a4a20]/65">{text}</p>
+    </div>
+  );
+}
+
+function KitchenMini({ icon, title, text }) {
+  return (
+    <div className="rounded-3xl border border-[#f7f0e3]/15 bg-[#f7f0e3]/10 p-5">
+      <Icon icon={icon} className="text-4xl text-[#c4956a]" />
+      <p className="mt-3 font-bold text-[#f7f0e3]">{title}</p>
+      <p className="mt-2 text-sm leading-6 text-[#f7f0e3]/65">{text}</p>
+    </div>
+  );
+}
+
+function NameCard({ name, desc }) {
+  return (
+    <div className="rounded-3xl border border-[#f7f0e3]/15 bg-[#f7f0e3]/10 p-4">
+      <p className="font-['Instrument_Serif'] text-2xl text-[#f7f0e3]">{name}</p>
+      <p className="mt-1 text-sm leading-6 text-[#f7f0e3]/70">{desc}</p>
+    </div>
+  );
+}
+
+function InfoCard({ title, icon, text }) {
+  return (
+    <article className="rounded-4xl border border-[#4a7a38]/20 bg-white/30 p-6 shadow-sm">
+      <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#4a7a38]/10 text-[#4a7a38]">
+        <Icon icon={icon} className="text-3xl" />
+      </div>
+      <h3 className="font-['Instrument_Serif'] text-2xl text-[#2a4a20]">{title}</h3>
+      <p className="mt-3 text-sm leading-7 text-[#2a4a20]/70">{text}</p>
+    </article>
+  );
+}
+
+function BoxMetric({ value, label }) {
+  return (
+    <div className="rounded-3xl border border-[#f7f0e3]/15 bg-[#f7f0e3]/10 p-4 text-center">
+      <p className="font-['Instrument_Serif'] text-4xl text-[#c4956a]">{value}</p>
+      <p className="mt-1 text-xs font-bold uppercase tracking-[0.18em] text-[#f7f0e3]/65">{label}</p>
+    </div>
+  );
+}
+
+function PackingLayer({ icon, title, text }) {
+  return (
+    <div className="rounded-3xl border border-[#4a7a38]/15 bg-[#f7f0e3] p-5">
+      <Icon icon={icon} className="text-4xl text-[#4a7a38]" />
+      <h4 className="mt-4 font-['Instrument_Serif'] text-2xl text-[#2a4a20]">{title}</h4>
+      <p className="mt-2 text-sm leading-7 text-[#2a4a20]/70">{text}</p>
     </div>
   );
 }
